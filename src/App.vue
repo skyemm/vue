@@ -41,6 +41,7 @@
 <style lang="css" scoped>
 .app-contents {
   padding-top: 40px;
+  padding-bottom: 50px;
   overflow-x: hidden; 
 }
 .v-enter,
