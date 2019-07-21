@@ -16,10 +16,10 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a>
+        <router-link to="/home/photosList">
           <img src="../../images/menu2.png" alt style="width:60px; height: 60px;" />
           <div class="mui-media-body">图片分享</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a>
