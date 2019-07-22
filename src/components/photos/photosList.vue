@@ -11,7 +11,7 @@
             :class="['mui-control-item', item.id == 0 ? 'mui-active' : '']"
             v-for="item in listNum"
             :key="item.id"
-            @click="getListById(item.id)"
+            @tap="getListById(item.id)"
           >{{item.title}}</a>
         </div>
       </div>
@@ -82,6 +82,9 @@ export default {
 * {
   touch-action: pan-y;
 }
+// .mui-slider{
+//   position:fixed;
+// }
  .photos-list {
     list-style: none;
     margin: 0;

@@ -22,10 +22,10 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a>
+        <router-link to="/home/shoppingList">
           <img src="../../images/menu3.png" alt style="width:60px; height: 60px;" />
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a>
@@ -95,10 +95,12 @@ export default {
     }
   }
 }
-.mui-grid-view .mui-grid-9 {
-  background-color: #ffffff;
+
+.mui-table-view.mui-grid-view .mui-grid-9 {
+  background-color:white;
   border: none;
   li {
+    background-color:white;
     img {
       width: 60px;
       height: 60px;
