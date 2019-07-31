@@ -33,7 +33,7 @@
           <numBox v-on:componentNumber='getNumber' :Max='goodsInfo.stock_quantity'></numBox>
         </p>
         <mt-button type="primary" size="small">&nbsp;&nbsp;&nbsp;立即购买&nbsp;&nbsp;&nbsp;</mt-button>
-        <mt-button type="danger" size="small" @click="flag=!flag">加入购物车</mt-button>
+        <mt-button type="danger" size="small" @click="addToShop">加入购物车</mt-button>
       </div>
     </div>
 
@@ -66,7 +66,7 @@ export default {
       id: this.$route.params.id, //获取路由中的图片id
       goodsInfo: {}, //存储商品信息
       flag: false, //确定小球是否显示
-      number:1,//存放商品数量
+      number:1,//存放加入购物车的商品数量
     };
   },
   created() {
@@ -142,6 +142,7 @@ export default {
       //vue把一个完整的动画拆分为了两部分
       //我们使用flag来表示动画的切换
       //刚开始，flag=false->  true  ->false
+     // console.log("afterrnter:flag is"+this.flag)
     },
 
     getNumber(num){
@@ -152,7 +153,20 @@ export default {
       }else{
         this.number=num;
       }
-      console.log(this.number);
+      //console.log(this.number);
+    },
+    addToShop(){
+      this.flag=!this.flag;
+      //console.log("add flag is"+this.flag)
+      var info={
+        //{id:null,count:null,price:null,flag:false}
+        id:this.id,
+        count:this.number,
+        price:this.goodsInfo.sell_price,
+        flag:true,
+      }
+      this.$store.commit('addToCar',info)
+      console.log(this.$store.getters.getAllCount)
     }
   },
   components: {

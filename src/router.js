@@ -13,6 +13,7 @@ import shoppingList from './components/shopping/shoppingList.vue'
 import shoppingInfo from './components/shopping/shoppingInfo.vue'
 import shoppingDesc from './components/shopping/shoppingDesc.vue'
 import shoppingcomments from './components/shopping/shoppingComment.vue'
+// import carList from './components/cars/carsList.vue'
 
 
 //3.创建一个路由对象
@@ -31,6 +32,7 @@ var router = new VueRouter({
             { path: '/home/shoppingList/:id', component: shoppingInfo, name: "shoppingInfo" },
             { path: '/home/shoppingDesc/:id', component: shoppingDesc },
             { path: '/home/shoppingComment/:id', component: shoppingcomments },
+            // { path: '/shopcar/carsList', component: carList },
         ],
         linkActiveClass: 'mui-active' //覆盖路由默认的高亮的类，默认的是router-link-active
     })
